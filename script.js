@@ -28,8 +28,9 @@ $(function () {
 
   $("#ok").click(function () {
     let q = $("#question").val();
-    $("#answers").append(`<div class="human_answ">${q.trim()}</div>`);
+
     if (q.trim() != "") {
+      $("#answers").append(`<div class="human_answ">${q.trim()}</div>`);
       let ql = q.toLowerCase();
       let bl = bye.substr(0, bye.length - 1).toLowerCase();
       if (ql.search(bl) != -1) {
