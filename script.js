@@ -39,7 +39,13 @@ $(function () {
         $("#answers").append(`<div class="bot_answ">!!!</div>`);
       }
       let chatbot = document.getElementById("chatbot");
-      $("#chatbot").scrollTop(chatbot.scrollHeight - chatbot.clientHeight);
+      //$("#chatbot").scrollTop(chatbot.scrollHeight - chatbot.clientHeight);
+      $("#chatbot").animate(
+        {
+          scrollTop: chatbot.scrollHeight - chatbot.clientHeight,
+        },
+        500
+      );
     }
     return false;
   });
