@@ -33,19 +33,23 @@ $(function () {
       $("#answers").append(`<div class="human_answ">${q.trim()}</div>`);
       let ql = q.toLowerCase();
       let bl = bye.substr(0, bye.length - 1).toLowerCase();
-      if (ql.search(bl) != -1) {
-        $("#answers").append(`<div class="bot_answ">${bye}</div>`);
-      } else {
-        $("#answers").append(`<div class="bot_answ">!!!</div>`);
-      }
-      let chatbot = document.getElementById("chatbot");
-      //$("#chatbot").scrollTop(chatbot.scrollHeight - chatbot.clientHeight);
-      $("#chatbot").animate(
-        {
-          scrollTop: chatbot.scrollHeight - chatbot.clientHeight,
-        },
-        500
-      );
+      $("#chatbot").scrollTop(chatbot.scrollHeight - chatbot.clientHeight);
+      setTimeout(function () {
+        if (ql.search(bl) != -1) {
+          $("#answers").append(`<div class="bot_answ">${bye}</div>`);
+        } else {
+          $("#answers").append(`<div class="bot_answ">!!!</div>`);
+        }
+
+        let chatbot = document.getElementById("chatbot");
+        $("#chatbot").scrollTop(chatbot.scrollHeight - chatbot.clientHeight);
+        // $("#chatbot").animate(
+        //   {
+        //     scrollTop: chatbot.scrollHeight - chatbot.clientHeight,
+        //   },
+        //   500
+        // );
+      }, 1000);
     }
     return false;
   });
