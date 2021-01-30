@@ -11,4 +11,7 @@ $(function () {
   const bye = "Пока!";
   $("h1").css("color", "red");
   $("#answers").append(`<div class="bot_answ">${hello}</div>`);
+  $("#chatbot").click(function () {
+    $(this).toggleClass("show");
+  });
 });
