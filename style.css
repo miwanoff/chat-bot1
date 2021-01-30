@@ -35,10 +35,18 @@ form#form_chatbox input {
   left: calc(100% - 220px) !important;
 }
 
-.bot_answ {
-  background-color: #c4e7f4eb;
+.bot_answ,
+.human_answ {
   margin: 10px 0;
   padding: 10px;
   border-radius: 10px;
+}
+
+.human_answ {
+  background-color: #fff;
+}
+
+.bot_answ {
   transform: translateX(-10px);
+  background-color: #c4e7f4eb;
 }

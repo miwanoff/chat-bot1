@@ -27,6 +27,9 @@ $(function () {
   });
 
   $("#ok").click(function () {
+    let q = $("#question").val();
+    if (q.trim() != "")
+      $("#answers").append(`<div class="human_answ">${q}</div>`);
     return false;
   });
 });
