@@ -38,6 +38,8 @@ $(function () {
       } else {
         $("#answers").append(`<div class="bot_answ">!!!</div>`);
       }
+      let chatbot = document.getElementById("chatbot");
+      $("#chatbot").scrollTop(chatbot.scrollHeight - chatbot.clientHeight);
     }
     return false;
   });
