@@ -1,1 +1,3 @@
-$("h1").css("color", "red");
+$(function () {
+  $("h1").css("color", "red");
+});
