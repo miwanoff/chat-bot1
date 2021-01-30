@@ -10,4 +10,5 @@ $(function () {
   const goodbye = "До свидания!";
   const bye = "Пока!";
   $("h1").css("color", "red");
+  $("#answers").append(`<div class="bot_answ">${hello}</div>`);
 });
