@@ -28,8 +28,15 @@ $(function () {
 
   $("#ok").click(function () {
     let q = $("#question").val();
-    if (q.trim() != "")
-      $("#answers").append(`<div class="human_answ">${q}</div>`);
+    if (q.trim() != "") {
+      let ql = q.toLowerCase();
+      let bl = bye.substr(0, bye.length - 1).toLowerCase();
+      if (ql.search(bl) != -1) {
+        $("#answers").append(`<div class="human_answ">${bye}</div>`);
+      } else {
+        $("#answers").append(`<div class="human_answ">!!!</div>`);
+      }
+    }
     return false;
   });
 });
